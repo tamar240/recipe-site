@@ -1,10 +1,8 @@
 body{
   background-color: rgba(255, 255, 255, 0.632);
   background-image: url('../images/spoon.jpg');
-  background-size: cover; 
-  background-position: center;  
-  background-repeat: repeat;
-  height: 100vh; 
-
+  background-size: cover;  /* כדי שהתמונה תתמלא את כל המסך */
+  background-position: center;  /* ממקם את התמונה במרכז */
+  background-repeat: no-repeat;  /* מונע חזרה על התמונה */
+  height: 100vh;  /* גובה המסך */
 }
-

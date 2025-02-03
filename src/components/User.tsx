@@ -15,7 +15,6 @@ type Action = {
     id?: number;
 };
 
-//מימוש הפעולות בסטייט
 export const UserReducer = (state: UserType, action: Action): UserType => {
 
     switch (action.type) {

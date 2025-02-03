@@ -2,7 +2,6 @@ import { RecipeType } from '../store/recipeSlice';
 import { Box, Typography, List, ListItem, Divider, Card, CardContent, Grid2 as Grid } from '@mui/material';
 import { styled } from '@mui/system';
 
-// יצירת קומפוננטה מעוצבת עבור המתכון
 interface RecipeDetailsProps {
   recipe: RecipeType;
 }
