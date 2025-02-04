@@ -7,7 +7,7 @@ import * as yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { addRecipe } from '../store/recipeSlice';
 import { AppDispatch } from '../store/store';
-import { userContext } from './User';
+import { UserContext } from './User';
 import SuccessAlert from './SuccessAlert';
 
 const schema = yup.object({
@@ -26,7 +26,7 @@ const RecipeForm: React.FC = () => {
   });
 
   const { fields, append, remove } = useFieldArray({ control, name: 'ingredients' });
-  const [user] = useContext(userContext);
+  const [user] = useContext(UserContext);
   const [error, setError] = useState('');
 
   const onSubmit= async (data: any) => {

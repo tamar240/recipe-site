@@ -1,7 +1,7 @@
 import { Box, Button, Grid2 as Grid, Modal, TextField, Typography, IconButton, InputAdornment } from "@mui/material";
 import { createContext, FormEvent, useContext, useRef, useState } from "react";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
-import { userContext } from "./User";
+import { UserContext } from "./User";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { modalStyle, loginButtonStyle, signUpButtonStyle, textFieldStyle, modalDescriptionStyle, submitButtonStyle } from './styles';
@@ -10,7 +10,7 @@ export const setIsLoginContext = createContext<Function>(() => { });
 export const userIdContext = createContext<number>(0);
 
 const WelcomePage = () => {
-    const [state, dispatch] = useContext(userContext);
+    const [state, dispatch] = useContext(UserContext);
     const [isLogin, setIsLogin] = useState(false);
     const [open, setOpen] = useState(false);
     const [status, setStatus] = useState<"register" | "login">("register");

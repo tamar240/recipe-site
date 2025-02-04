@@ -4,7 +4,7 @@ import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, 
 import { Link } from 'react-router-dom';
 import AdbIcon from '@mui/icons-material/Adb';
 import MenuIcon from '@mui/icons-material/Menu';
-import { userContext } from './User';
+import { UserContext } from './User';
 import { appBarStyles, menuIconStyles, mobileTypographyStyles, buttonStyles, menuStyles, tooltipStyles, avatarMenuStyles, typographyStyles } from './styles';
 import FoodBankRoundedIcon from '@mui/icons-material/FoodBankRounded';
 const pages = [
@@ -19,7 +19,7 @@ const settings = [
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
-  const [state] = useContext(userContext);
+  const [state] = useContext(UserContext);
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };

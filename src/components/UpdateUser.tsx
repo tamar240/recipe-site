@@ -1,7 +1,7 @@
 import { FormEvent, useContext, useRef, useState } from "react"
 import { Alert, Box, Button, Modal, TextField, Typography } from "@mui/material"
 import axios from "axios";
-import { userContext } from "./User";
+import { UserContext } from "./User";
 import { useNavigate } from "react-router-dom";
 import { updateStyle } from "./styles"
 const UpdateUser = () => {
@@ -14,7 +14,7 @@ const UpdateUser = () => {
     setOpen(false);
   }
 
-  const [state, dispatch] = useContext(userContext);
+  const [state, dispatch] = useContext(UserContext);
 
   const firstNameRef = useRef<HTMLInputElement>(null);
   const lastNameRef = useRef<HTMLInputElement>(null);

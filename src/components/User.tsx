@@ -57,4 +57,4 @@ export const initialUserState: UserType = {
 
 type UserContextType = [UserType, Dispatch<Action>];
 
-export const userContext = createContext<UserContextType>([initialUserState, () => { }])
+export const UserContext = createContext<UserContextType>([initialUserState, () => { }])
